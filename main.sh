@@ -1,5 +1,10 @@
 #!/bin/bash
+
 script_dir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )"
+
+# https://stackoverflow.com/questions/12815774/importing-functions-from-a-shell-script
+#echo $script_dir;
+#exit
 
 grep=""
 dry_run="0"
@@ -20,3 +25,6 @@ for s in $setup_dir; do
 
     $s
 done
+
+
+tail -f /dev/null
