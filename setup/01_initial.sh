@@ -1,7 +1,7 @@
 #!/bin/bash
 
-${SUDO}apt -y update
-${SUDO}apt -y install zsh git tmux curl unzip
+sudo apt -y update
+sudo apt -y install zsh git tmux curl unzip
 
 
 # Make zsh default shell
