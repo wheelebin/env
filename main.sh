@@ -27,4 +27,5 @@ for s in $setup_dir; do
 done
 
 
+echo "DONE!"
 tail -f /dev/null

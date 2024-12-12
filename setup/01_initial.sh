@@ -1,7 +1,8 @@
 #!/bin/bash
 
-"${SUDO}"apt -y update
-"${SUDO}"apt -y install zsh git tmux curl unzip
+${SUDO}apt -y update
+${SUDO}apt -y install zsh git tmux curl unzip
+
 
 # Make zsh default shell
 chsh -s $(which zsh)
@@ -20,5 +21,6 @@ $configCMD checkout
 
 
 # fnm & latest LTS node version
-curl -fsSL https://fnm.vercel.app/install | bash 
-zsh -c "source /root/.zshrc; fnm install --lts"
+export SHELL="/bin/zsh"
+curl -fsSL https://fnm.vercel.app/install | zsh
+zsh -c "source $HOME/.zshrc; fnm install --lts"
