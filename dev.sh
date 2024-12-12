@@ -19,4 +19,8 @@ elif [[ $action == "ssh" ]]; then
     ssh "${vm_user}@${vm_name}@orb"
 elif [[ $action == "rm" ]]; then
     orbctl delete ${vm_name}
+elif [[ $action == "push" ]]; then
+    git add -A
+    git commit -m "random deb push"
+    git push
 fi
